@@ -1,0 +1,14 @@
+clc;                                             
+close all;                                      
+clear all;                                       
+y=input('Output sequence y(n) of the system = ');
+x=input('Input sequence x(n) of the system = '); 
+N=input('Enter the length of impulse response =');
+h=impz(y,x,N);                                    
+disp('Impulse Response of system h(n)');    
+disp(h);                                         
+n=0:1:N-1;                                        
+stem(n,h);                                    
+xlabel('n');                                      
+ylabel('h(n)');                                   
+title('Impulse Response');                        
